@@ -1,0 +1,663 @@
+Form 1
+<!DOCTYPE html>
+<html lang="en">
+<style>
+good {
+size:10;
+}
+nav {
+  background-color: #222222;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+body {
+  background-image: url("https://images5.alphacoders.com/394/394862.jpg"); 
+  background-repeat: no-repeat;
+  width:1500;
+height:600%;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Search form styling */
+form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#search-term {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-grow: 1; /* Allow the input to expand to fill available space */
+}
+
+button[type="submit"] {
+  padding: 5px 10px;
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#book-results {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.book-result {
+  margin-bottom: 10px;
+}
+
+.book-result h2 {
+  margin: 0;
+}
+
+.book-result p {
+  margin-top: 5px;
+  color: #888;
+}
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Digital   
+ Library</title>
+  <link rel="stylesheet" href="style.css">   
+
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="C:\Users\RITU SINGH\OneDrive\Desktop\library.html">Home</a></li>
+      <li div class="hello"><a href="C:\Users\RITU SINGH\OneDrive\Desktop\sign up.html">Sign Up</a></li>
+      <li><a href="C:\Users\RITU SINGH\OneDrive\Desktop\fiction.html">Fiction</a></li>
+      <li><a href="C:\Users\RITU SINGH\OneDrive\Desktop\non fiction.html">Non-Fiction</a></li>
+      <li><a href="#">Children's Books</a></li>
+      </ul>
+  </nav>
+
+
+  <h1>Welcome to My Digital Library!</h1>
+  <form id="search-form">
+    <label for="search-term">Search Books:</label>
+    <input type="text" id="search-term" name="search-term" placeholder="Enter book title or author">
+    <button type="submit">Search</button>
+  </form>
+  <div id="book-results">
+  </div>
+
+  <script src="script.js">
+    const searchForm = document.getElementById('search-form');
+    const searchTermInput = document.getElementById('search-term');
+    const bookResultsDiv = document.getElementById('book-results');
+
+    searchForm.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent default form submission
+
+      const searchTerm = searchTermInput.value;
+
+      bookResultsDiv.textContent = `Search results for "${searchTerm}" will be displayed here.`;
+    });
+  </script>
+</body>
+</html>
+
+Form 2
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background: linear-gradient(to bottom right, #228B22, #00FF00, #32CD32);
+}
+
+
+nav {
+  background-color: #222222; 
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f0f0f0; 
+}
+
+img {
+  width: 100%; 
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book {
+  width: 250px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book img {
+  max-width: 100%;
+  height: auto;
+}
+
+.book h2 {
+  margin-top: 10px;
+}
+</style>
+<head>
+    <title>Fiction Books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav>
+    <ul>
+      <li><a href="C:\Users\RITU SINGH\OneDrive\Desktop\library.html">Home</a></li>
+      <li class="hello"><a href="C:\Users\RITU SINGH\OneDrive\Desktop\sign up.html">Sign Up</a></li>
+      <li><a href="C:\Users\RITU SINGH\OneDrive\Desktop\fiction.html">Fiction</a></li>
+      <li><a href="C:\Users\RITU SINGH\OneDrive\Desktop\non fiction.html">Non-Fiction</a></li>
+      <li><a href="#">Children's Books</a></li>
+      </ul>
+  </nav>
+
+
+    <h1>Fiction Books</h1>
+
+    <div class="book-container">
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\The Great Gatsby.png" alt="The Great Gatsby">
+            <h2>The Great Gatsby</h2>
+            <p>Author: F. Scott Fitzgerald</p>
+            <p>Genre: Classic American Fiction</p>
+            <p>Description: A story of wealth, love, and the American Dream set in the Jazz Age.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\harper.png" alt="To Kill a Mockingbird" class="img">
+            <h2>To Kill a Mockingbird</h2>
+            <p>Author: Harper Lee</p>
+            <p>Genre: Southern Gothic</p>
+            <p>Description: A coming-of-age story set in the American South during the 1930s, exploring themes of racism and justice.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\orwell.png" alt="1984">
+            <h2>1984</h2>
+            <p>Author: George Orwell</p>
+            <p>Genre: Dystopian Fiction</p>
+            <p>Description: A chilling exploration of a totalitarian society and the loss of individuality.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\jane.png" alt="Pride and Prejudice">
+            <h2>Pride and Prejudice</h2>
+            <p>Author: Jane Austen</p>
+            <p>Genre: Romance</p>
+            <p>Description: A witty and charming tale of love and social class in 19th-century England.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\jrr.png" alt="The Lord of the Rings">
+            <h2>The Lord of the Rings</h2>
+            <p>Author: J.R.R. Tolkien</p>
+            <p>Genre: High Fantasy</p>
+            <p>Description: An epic adventure filled with hobbits, wizards, and mythical creatures.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\rowling.png" alt="Harry Potter and the Sorcerer's Stone">
+            <h2>Harry Potter and the Sorcerer's Stone</h2>
+            <p>Author: J.K. Rowling</p>
+            <p>Genre: Fantasy</p>
+            <p>Description: The first book in the beloved Harry Potter series, introducing the magical world of Hogwarts.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\adams.png" alt="The Hitchhiker's Guide to the Galaxy">
+            <h2>The Hitchhiker's Guide to the Galaxy</h2>
+            <p>Author: Douglas Adams</p>
+            <p>Genre: Science Fiction, Comedy</p>
+            <p>Description: A humorous and absurdly comic space adventure.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\frank.png" alt="Dune">
+            <h2>Dune</h2>
+            <p>Author: Frank Herbert</p>
+            <p>Genre: Science Fiction</p>
+            <p>Description: A complex and epic story of politics, ecology, and destiny on the desert planet Arrakis.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\gabriel.png" alt="One Hundred Years of Solitude">
+            <h2>One Hundred Years of Solitude</h2>
+            <p>Author: Gabriel García Márquez</p>
+            <p>Genre: Magical Realism</p>
+            <p>Description: A multi-generational saga of the Buendía family in the fictional town of Macondo.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\fyodor.png" alt="Crime and Punishment">
+            <h2>Crime and Punishment</h2>
+            <p>Author: Fyodor Dostoevsky</p>
+            <p>Genre: Psychological Thriller</p>
+            <p>Description: A complex exploration of morality, guilt, and redemption through the mind of a troubled protagonist.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+Form 3
+<!DOCTYPE html>
+<html>
+<style>
+nav {
+  background-color: #222222;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f0f0f0; 
+}
+
+img {
+  width: 100%; 
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book {
+  width: 250px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book img {
+  max-width: 100%;
+  height: auto;
+}
+
+.book h2 {
+  margin-top: 10px;
+}
+body {
+  background: linear-gradient(to bottom right, #f27121, #e94057, #8f94fb);
+}
+
+</style>
+<head>
+    <title>Non-Fiction Books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav>
+    <ul>
+      <li><a href="C:\Users\RITU SINGH\OneDrive\Desktop\library.html">Home</a></li>
+      <li class="hello"><a href="C:\Users\RITU SINGH\OneDrive\Desktop\sign up.html">Sign Up</a></li>
+      <li><a href="C:\Users\RITU SINGH\OneDrive\Desktop\fiction.html">Fiction</a></li>
+      <li><a href="C:\Users\RITU SINGH\OneDrive\Desktop\non fiction.html">Non-Fiction</a></li>
+      <li><a href="#">Children's Books</a></li>
+      </ul>
+  </nav>
+
+    <h1>Non-Fiction Books</h1>
+
+    <div class="book-container">
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\yuval.png" alt="Sapiens: A Brief History of Humankind="img"/>
+             <h2>Sapiens: A Brief History of Humankind</h2>
+            <p>Author:  Yuval Noah Harari</p>
+            <p>Genre: History, Science</p>
+            <p>Description: A groundbreaking exploration of the history of humankind from the Stone Age to the present.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\hans.png" alt="Factfulness: Ten Reasons We're Wrong About the World - and Why Things Are Better Than You Think="img">
+            <h2> Factfulness: Ten Reasons We're Wrong About the World - and Why Things Are Better Than You Think</h2>
+            <p>Author: Hans Rosling</p>
+            <p>Genre: Data Journalism, Social Science</p>
+            <p>Description: Challenges misconceptions about global trends and offers a data-driven perspective on the world's progress.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\sasun.png" alt="Quiet: The Power of Introverts in a World That Can't Stop Talking">
+            <h2>Quiet: The Power of Introverts in a World That Can't Stop Talking</h2>
+            <p>Author: Susan CainGenre</p>
+            <p>Genre: Psychology, Self-Help</p>
+            <p>Description:Explores the strengths and challenges of introverts in a predominantly extroverted society.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\eric.png" alt="The Lean Startup">
+            <h2>The Lean Startup</h2>
+            <p>Author: Eric Ries</p>
+            <p>Genre: Business, Entrepreneurship</p>
+            <p>Description: A guide to building successful businesses through iterative product development and customer feedback.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\daniel.png" alt="Thinking, Fast and Slow">
+            <h2>Thinking, Fast and Slow</h2>
+            <p>Author: Daniel Kahneman</p>
+            <p>Genre: Psychology, Cognitive Science</p>
+            <p>Description:Explores the two systems of thinking - fast, intuitive, and slow, deliberate - and their impact on decision-making.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\sidd.png" alt="The Emperor of All Maladies: A Biography of Cancere">
+            <h2>The Emperor of All Maladies: A Biography of Cancer</h2>
+            <p>Author: Siddhartha Mukherjee</p>
+            <p>Genre: Science, Medicine</p>
+            <p>Description:  A comprehensive history of cancer, exploring its biological, social, and personal impact.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\jared.png" alt="Guns, Germs, and Steel: The Fates of Human Societies">
+            <h2>Guns, Germs, and Steel: The Fates of Human Societies</h2>
+            <p>Author:Jared Diamond</p>
+            <p>Genre: History, Anthropology</p>
+            <p>Description:  Investigates the factors that contributed to the rise of Western civilizations.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\charles.png" alt="The Power of Habit">
+            <h2>The Power of Habit</h2>
+            <p>Author: Charles Duhigg</p>
+            <p>Genre: Psychology, Self-Help</p>
+            <p>Description: Explores the science of habit formation and how to change them.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\viktor.png" alt="Man's Search for Meaning">
+            <h2>Man's Search for Meaning</h2>
+            <p>Author: Viktor Frankl</p>
+            <p>Genre: Philosophy, Psychology</p>
+            <p>Description: A reflection on the author's experiences in Nazi concentration camps and the search for meaning in life.</p>
+        </div>
+
+        <div class="book">
+            <img src="C:\Users\RITU SINGH\OneDrive\Pictures\elizabeth.png" alt="The Sixth Extinction: An Unnatural History">
+            <h2>The Sixth Extinction: An Unnatural History</h2>
+            <p>Author:  Elizabeth Kolbert</p>
+            <p>Genre: Science, Environment</p>
+            <p>Description: Examines the evidence for a sixth mass extinction event and its implications for the planet.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+Form 4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        .signup-container {
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffa100, #ff8000, #ff0000), url("https://images5.alphacoders.com/394/394862.jpg"); 
+            background-blend-mode: overlay;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+        }
+        .signup-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        nav {
+            background-color: #222222;
+            overflow: hidden;
+            width: 100%;
+            position: fixed;
+            top: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav li a:hover {
+            background-color: #111;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        form {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        #search-term {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            flex-grow: 1; 
+        }
+        button[type="submit"] {
+            padding: 5px 10px;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+     
+        #book-results {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+        .book-result {
+            margin-bottom: 10px;
+        }
+        .book-result h2 {
+            margin: 0;
+        }
+        .book-result p {
+            margin-top: 5px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
+
+

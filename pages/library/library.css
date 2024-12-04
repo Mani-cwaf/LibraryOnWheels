@@ -1,0 +1,40 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--contrast);
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.book {
+    width: 12rem;
+    height: 12rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--complement);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search * {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    color: inherit;
+    background-color: inherit;
+    font-family: inherit;
+}

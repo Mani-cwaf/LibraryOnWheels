@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Library On Wheels</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="./renderer.js"></script>
+
+</head>
+
+<body>
+    <div class="nav-bar">
+        <button class="nav-link" id="main-tab" onclick="document.querySelector('iframe').src = './pages/main/main.html'">Main</button>
+        <button class="nav-link" id="library-tab" onclick="document.querySelector('iframe').src = './pages/library/library.html'">Library</button>
+        <button class="nav-link" id="forum-tab" onclick="document.querySelector('iframe').src = './pages/forum/forum.html'">Forum</button>
+        <button class="nav-link" id="about-tab" onclick="document.querySelector('iframe').src = './pages/about/about.html'">About</button>
+    </div>
+    <iframe id="page" src="" frameborder="0"></iframe>
+</body>
+
+</html>

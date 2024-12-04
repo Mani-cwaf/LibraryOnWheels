@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Digital Library</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=American+Typewriter&display=swap">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'American Typewriter', serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                  url("https://images5.alphacoders.com/394/394862.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 50px;
+      letter-spacing: 2px;
+      color: #FFDD57;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .content a {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      margin: 15px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      border-radius: 10px;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .content a:hover {
+      background-color: #45a049;
+      transform: translateY(-5px);
+    }
+
+    .search-container {
+      margin-top: 50px;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 1.2rem;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    #search-term {
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      width: 250px;
+      outline: none;
+    }
+
+    #search-term:focus {
+      border-color: #4CAF50;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+
+    button[type="submit"] {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      animation: bounce 2s infinite;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+      transform: scale(1.1);
+    }
+
+    /* Loading animation */
+    @keyframes pulsate {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    #loading {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.5rem;
+      animation: pulsate 1.5s infinite;
+    }
+
+    #book-results {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      max-width: 600px;
+      margin: 20px auto;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+        margin-top: 30px;
+      }
+
+      .content a {
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin: 10px;
+      }
+
+      #search-term {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to My Digital Library</h1>
+
+
+  <!-- Search Section -->
+  <div class="search-container">
+    <form id="search-form">
+      <label for="search-term">Search Books:</label>
+      <input type="text" id="search-term" name="search-term" placeholder="Enter book title or author">
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="book-results">
+      <!-- Search results will display here -->
+    </div>
+    
+    <!-- Loading animation -->
+    <div class="loading" id="loading">Searching...</div>
+  </div>
+
+  <script>
+    const searchForm = document.getElementById('search-form');
+    const searchTermInput = document.getElementById('search-term');
+    const bookResultsDiv = document.getElementById('book-results');
+    const loadingDiv = document.getElementById('loading');
+
+    searchForm.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent default form submission
+
+      const searchTerm = searchTermInput.value.trim();
+
+      if (searchTerm) {
+        // Display loading message
+        loadingDiv.style.display = 'block';
+        bookResultsDiv.textContent = ''; // Clear previous results
+
+        // Simulate a search result delay (e.g., via an API call)
+        setTimeout(() => {
+          loadingDiv.style.display = 'none'; // Hide loading
+          bookResultsDiv.textContent = `Search results for "${searchTerm}" will be displayed here.`;
+        }, 1500);
+      } else {
+        bookResultsDiv.textContent = 'Please enter a search term!';
+      }
+    });
+  </script>
+
+</body>
+</html>
