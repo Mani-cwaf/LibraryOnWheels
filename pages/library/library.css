@@ -15,13 +15,24 @@ body {
 }
 
 .book {
-    width: 12rem;
-    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 14rem;
+    height: 16rem;
     padding: 1rem;
     margin: 1rem;
     border-radius: 0.5rem;
     background-color: var(--complement);
 }
+
+.book div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
 
 .search {
     display: flex;

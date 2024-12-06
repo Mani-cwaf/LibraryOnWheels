@@ -1,11 +1,15 @@
 let frame
 
+async function getBookList() {
+    return await window.code.getList();
+}
+
 async function sendBooks(search) {
     const booklist = await window.code.requestBooks();
     let response = [];
-    booklist.forEach(element => {
-        if (element.toLowerCase().indexOf(search.toLowerCase()) >= 0) {
-            response.push(element.substr(0, element.length - 4));
+    booklist.forEach(book => {
+        if ((book.split(/\s+/)[0] == search[0] || search[0] == 'all') && (book.split(/\s+/)[1] == search[1] || search[1] == 'all') && book.split(/\s+/).slice(2, book.split(/\s+/).length).join(' ').toLowerCase().indexOf(search[2].toLowerCase()) >= 0) {
+            response.push(book.substr(0, book.length - 4));
         }
     });
     return response;
